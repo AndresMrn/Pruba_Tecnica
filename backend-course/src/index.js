@@ -1,10 +1,11 @@
-import app from './app.js';
+import { server } from './app.js';
 import { connectDB} from './db.js';
-import { io } from './app.js';
+import { MessagesSocket } from './controllers/messages.controller.js';
 
 
-const port = process.env.Port ?? 3000;
+const port = 3000;
 
 connectDB();
-app.listen(port)
+MessagesSocket(); 
+server.listen(port)
 console.log('server port', port)

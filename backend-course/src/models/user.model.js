@@ -1,10 +1,17 @@
 import mongoose from "mongoose";
 
 const userSchema = new mongoose.Schema({
+    
+    name_estudent : {
+        type : String,
+        requited : true,
+    },
+
     username :{
         type : String,
         required : true,
-        trim : true
+        trim : true,
+        unique : true,
     }, 
     email : {
         type: String,
@@ -17,7 +24,7 @@ const userSchema = new mongoose.Schema({
         trim : true
     },
     role : {
-        type : Boolean
+        type : String
     }
 }, {
     timestamps : true

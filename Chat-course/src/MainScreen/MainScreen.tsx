@@ -1,8 +1,15 @@
-export default function  MainScreen(){
+import Routers from "../Routers";
+import { AuthProvider } from "../context/AuthContext";
 
-    return(
+export default function MainScreen() {
+
+    return (
         <>
-        <h1>Hola soy el nuevo renderizado</h1>
+            <AuthProvider>
+                <Routers />
+            </AuthProvider>
         </>
+
+
     )
 }
